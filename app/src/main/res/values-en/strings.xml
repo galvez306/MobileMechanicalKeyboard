@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mobile Mechanical Keyboard</string>
+    <string name="habilitar">Enable</string>
+    <string name="seleccionar">Select</string>
+    <string name="probar">Test</string>
+    <string name="ayuda"><u>Help</u></string>
+    <string name="ok">OK</string>
+    <string name="textoayuda">If you are having troubles with the setting of the keyboard in your device,
+        check the way to enable and select virtual keyboards on the Android version your device has,
+        it is different in each version. If you can not see the keycaps, turn off the dark mode.</string>
+</resources>

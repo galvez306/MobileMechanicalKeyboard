@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.creamcode.mobilemechanicalkeyboard.CustomKeyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard"
+    android:layout_alignParentBottom="true"
+    android:keyTextSize="@dimen/key_size"
+    android:keyTextColor="@color/transparente"
+    android:shadowRadius="0.0"
+    android:keyBackground="@drawable/key_background"
+    android:keyPreviewLayout="@null"
+    android:background="@drawable/gradient_animation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+</com.creamcode.mobilemechanicalkeyboard.CustomKeyboard>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mobile Mechanical Keyboard</string>
+    <string name="habilitar">Habilitar</string>
+    <string name="seleccionar">Seleccionar</string>
+    <string name="probar">Probar</string>
+    <string name="ayuda"><u>Ayuda</u></string>
+    <string name="ok">OK</string>
+    <string name="textoayuda">Si estas teniendo problemas con la configuración del teclado en tu dispositivo, consulta
+    la forma de habilitar y seleccionar teclados virtuales en la versiona de Android que tiene tu dispositivo,
+    en cada version es diferente. Si no puedes ver la teclas, desactiva el modo oscuro.</string>
+
+</resources>

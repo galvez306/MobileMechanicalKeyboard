@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantuno"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantdos"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradianttres"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantcuatro"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantcinco"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantseis"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantsiete"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantocho"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantnueve"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantdiez"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantonce"/>
+    <item android:duration="200"
+        android:drawable="@drawable/gradiantdoce"/>
+</animation-list>
