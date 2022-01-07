@@ -9,13 +9,11 @@
             android:codes="-10"
             android:keyWidth="6.6%p"
             android:keyEdgeFlags="left"
-            android:keyLabel="Esc" />
+            android:keyLabel="" />
         <Key
             android:codes="49"
             android:keyWidth="6.6%p"
-            android:keyLabel="1!"
-            android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="!"/>
+            android:keyLabel="1!"/>
         <Key
             android:codes="50"
             android:keyWidth="6.6%p"

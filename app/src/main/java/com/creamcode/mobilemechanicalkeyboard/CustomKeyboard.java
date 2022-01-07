@@ -36,8 +36,7 @@ public class CustomKeyboard extends KeyboardView {
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(getResources().getDimensionPixelSize(R.dimen.key_size));
         paint.setColor(Color.BLACK);
-        Typeface font = Typeface.createFromAsset(getContext().getAssets(),
-                "adam.ttf");
+        Typeface font = Typeface.createFromAsset(getContext().getAssets(), "adam.ttf");
         paint.setTypeface(font);
         List<Keyboard.Key> keys = getKeyboard().getKeys();
         for (Keyboard.Key key : keys) {
@@ -53,7 +52,8 @@ public class CustomKeyboard extends KeyboardView {
                     dr = (Drawable) getContext().getResources().getDrawable(R.drawable.rosa);
                     dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);
                     dr.draw(canvas);
-                    canvas.drawText(key.label.toString(), key.x + (key.width/2), key.y+key.height/2, paint);
+                    //maybe here, get the esc keycap in shared preferences
+                    canvas.drawText("☂", key.x + (key.width/2), key.y+key.height/2, paint);
                     break;
                 case -28:
                 case -21:
