@@ -4,45 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azulmarino"
+    android:background="@drawable/background_wood"
     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_esp_key"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/deskmat1"
+        android:text="@string/esc_key"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_key_font"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/deskmat4"
+        android:text="@string/key_font"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_esp_key" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_practice"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/deskmat5"
+        android:text="@string/practice"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_key_font" />
 
     <Button
         android:id="@+id/btn_conf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/aqua"
-        android:drawableLeft="@drawable/keyssei"
-        android:fontFamily="@font/oneday"
         android:onClick="habilitarTeclado"
         android:text="@string/habilitar"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confdos"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_practice" />
 
     <Button
         android:id="@+id/btn_confdos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="@color/aqua"
-        android:drawableLeft="@drawable/keyboardicon"
-        android:fontFamily="@font/oneday"
         android:onClick="seleccionarTeclado"
         android:text="@string/seleccionar"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_conf" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_practice" />
 
     <TextView
         android:id="@+id/txv_ayuda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="92dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:drawableLeft="@drawable/information"
         android:fontFamily="@font/oneday"
         android:onClick="ayuda"
@@ -50,26 +91,70 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:clickable="true"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_test" />
-
-    <EditText
-        android:id="@+id/edt_test"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/aqua"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/probar"
-        android:textColorHint="@color/black"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_confdos" />
 
+    <ImageView
+        android:id="@+id/iv_usb"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:src="@drawable/img_usb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_mouse"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:src="@drawable/img_mouse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_earpods"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="356dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/img_earpods"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_switch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="92dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:src="@drawable/img_switch_banana"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_coffee"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/img_coffeecup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
