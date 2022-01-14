@@ -1,19 +1,29 @@
 <resources>
     <string name="app_name">Mobile Mechanical Keyboard</string>
     <string name="esc_key">TECLA ESC</string>
+    <string name="guardado">Guardado</string>
     <string name="key_font">FUENTE TECLAS</string>
     <string name="practice">Probar</string>
     <string name="habilitar">Habilitar</string>
     <string name="seleccionar">Seleccionar</string>
     <string name="probar">Probar</string>
+    <string name="oraciondeprueba">
+        esta oracion solo sirve de muestra para ver si se pueden comparar los textos
+    </string>
     <string name="ayuda"><u>Ayuda</u></string>
     <string name="ok">OK</string>
     <string name="textoayuda">Si estas teniendo problemas con la configuración del teclado en tu dispositivo, consulta
     la forma de habilitar y seleccionar teclados virtuales en la versiona de Android que tiene tu dispositivo,
     en cada version es diferente. Si no puedes ver la teclas, desactiva el modo oscuro.</string>
 
+    <string-array name="array_fonts">
+        <item>faster.ttf</item>
+        <item>major.ttf</item>
+        <item>true.ttf</item>
+
+    </string-array>
     <string-array name="array_esc_key">
-        <item>†</item>
+        <item>Esc</item>
         <item>₪</item>
         <item>₻</item>
         <item>⅄</item>
@@ -21,9 +31,21 @@
         <item>∞</item>
         <item>☂</item>
         <item>☃</item>
+        <item>♫</item>
         <item>★</item>
+        <item>⚔</item>
+        <item>⛏</item>
+        <item>⚅</item>
+        <item>♠</item>
+        <item>⚜</item>
+        <item>⚽</item>
+        <item>⚾</item>
+        <item>⚰</item>
         <item>☊</item>
         <item>∴</item>
+        <item>†</item>
+        <item>⚡</item>
+        <item>⚝</item>
         <item>▣</item>
         <item>◈</item>
         <item>◍</item>
@@ -38,14 +60,25 @@
         <item>☠</item>
         <item>☢</item>
         <item>☣</item>
+        <item>🌀</item>
+        <item>♕</item>
+        <item>♔</item>
         <item>☮</item>
         <item>☯</item>
         <item>☸</item>
         <item>☹</item>
+        <item>♥</item>
         <item>🌈</item>
+        <item>🌵</item>
+        <item>⛵</item>
+        <item>⚓</item>
+        <item>🌹</item>
         <item>🌋</item>
         <item>🌎</item>
+        <item>🌙</item>
         <item>🌠</item>
+        <item>🌈</item>
+        <item>🌭</item>
         <item>🌮</item>
         <item>🌷</item>
         <item>🍄</item>
@@ -53,9 +86,54 @@
         <item>🍒</item>
         <item>🍓</item>
         <item>🍔</item>
+        <item>🥜</item>
         <item>🍕</item>
+        <item>🥞</item>
         <item>🍟</item>
+        <item>☕</item>
+        <item>🚬</item>
+        <item>🎃</item>
+        <item>🎧</item>
+        <item>🎮</item>
+        <item>🎩</item>
+        <item>🎱</item>
+        <item>🎲</item>
+        <item>🚽</item>
+        <item>🐌</item>
+        <item>🐇</item>
+        <item>🐒</item>
+        <item>🐙</item>
+        <item>🦀</item>
+        <item>🐲</item>
+        <item>🐍</item>
+        <item>👻</item>
+        <item>👽</item>
+        <item>💀</item>
+        <item>🤖</item>
+        <item>💣</item>
+        <item>🔫</item>
+        <item>💲</item>
+        <item>🔥</item>
+        <item>📎</item>
+        <item>💎</item>
+        <item>💩</item>
+        <item>💕</item>
+        <item>㊗</item>
+        <item>㊙</item>
+        <item>🈶</item>
+        <item>🈸</item>
+        <item>Ψ</item>
+        <item>ξ</item>
+        <item>ω</item>
+        <item>Ж</item>
+        <item>☬</item>
+        <item>🔱</item>
+        <item>🗺</item>
+        <item>🗽</item>
+        <item>🗿</item>
+        <item>😎</item>
+        <item>🚀</item>
+        <item>🚂</item>
+        <item>🥊</item>
     </string-array>
-
-
 </resources>

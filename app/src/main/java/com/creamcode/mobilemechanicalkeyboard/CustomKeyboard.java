@@ -1,6 +1,7 @@
 package com.creamcode.mobilemechanicalkeyboard;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -8,6 +9,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.util.Log;
 
@@ -16,6 +18,7 @@ import java.util.List;
 public class CustomKeyboard extends KeyboardView {
     private Context  mContext;
     private Keyboard mKeyBoard;
+    private SharedPreferences sharedPreferences;
 
     public CustomKeyboard(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -30,13 +33,14 @@ public class CustomKeyboard extends KeyboardView {
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         Drawable dr;
 
         Paint paint = new Paint();
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(getResources().getDimensionPixelSize(R.dimen.key_size));
         paint.setColor(Color.BLACK);
-        Typeface font = Typeface.createFromAsset(getContext().getAssets(), "adam.ttf");
+        Typeface font = Typeface.createFromAsset(getContext().getAssets(), "faster.ttf");
         paint.setTypeface(font);
         List<Keyboard.Key> keys = getKeyboard().getKeys();
         for (Keyboard.Key key : keys) {
@@ -52,8 +56,7 @@ public class CustomKeyboard extends KeyboardView {
                     dr = (Drawable) getContext().getResources().getDrawable(R.drawable.rosa);
                     dr.setBounds(key.x, key.y, key.x + key.width, key.y + key.height);
                     dr.draw(canvas);
-                    //maybe here, get the esc keycap in shared preferences
-                    canvas.drawText("☂", key.x + (key.width/2), key.y+key.height/2, paint);
+                    canvas.drawText(sharedPreferences.getString("esckeycap","Esc"), key.x + (key.width/2), key.y+key.height/2, paint);
                     break;
                 case -28:
                 case -21:

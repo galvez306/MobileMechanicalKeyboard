@@ -1,9 +1,12 @@
 package com.creamcode.mobilemechanicalkeyboard;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class EscKeyAdapter extends RecyclerView.Adapter<EscKeyAdapter.ViewHolder> {
+
+    private SharedPreferences sharedPreferences;
 
     List<String> characters;
     Context ctx;
@@ -32,7 +37,7 @@ public class EscKeyAdapter extends RecyclerView.Adapter<EscKeyAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.btnEscKey.setText(characters.get(position));
+        holder.tvEscKey.setText(characters.get(position));
     }
 
     @Override
@@ -41,16 +46,21 @@ public class EscKeyAdapter extends RecyclerView.Adapter<EscKeyAdapter.ViewHolder
     }
 
     public class ViewHolder extends  RecyclerView.ViewHolder{
-        AppCompatButton btnEscKey;
+        TextView tvEscKey;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            btnEscKey = itemView.findViewById(R.id.btn_esc_key_card);
+            tvEscKey = itemView.findViewById(R.id.tv_card);
 
-            btnEscKey.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(), "Guardado "+characters.get(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+                    sharedPreferences = PreferenceManager.getDefaultSharedPreferences(v.getContext());
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("esckeycap", characters.get(getAdapterPosition()));
+                    editor.apply();
+                    Toast.makeText(v.getContext(), characters.get(getAdapterPosition())+" "+v.getContext().getResources().getString(R.string.guardado), Toast.LENGTH_SHORT).show();
                 }
             });
         }
