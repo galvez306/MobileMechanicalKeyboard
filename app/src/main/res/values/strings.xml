@@ -3,6 +3,7 @@
     <string name="esc_key">TECLA ESC</string>
     <string name="guardado">Guardado</string>
     <string name="key_font">FUENTE TECLAS</string>
+    <string name="font_text_example">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="practice">Probar</string>
     <string name="habilitar">Habilitar</string>
     <string name="seleccionar">Seleccionar</string>
@@ -17,9 +18,20 @@
     en cada version es diferente. Si no puedes ver la teclas, desactiva el modo oscuro.</string>
 
     <string-array name="array_fonts">
-        <item>faster.ttf</item>
-        <item>major.ttf</item>
+        <item>adam.ttf</item>
+        <item>cinzel.ttf</item>
+        <item>iniya.otf</item>
+        <item>megrim.ttf</item>
+        <item>melted.ttf</item>
+        <item>ming.TTF</item>
+        <item>montserrat.ttf</item>
+        <item>oneday.otf</item>
+        <item>comfortaa.ttf</item>
+        <item>orbitron.ttf</item>
+        <item>spirits.ttf</item>
         <item>true.ttf</item>
+
+
 
     </string-array>
     <string-array name="array_esc_key">
