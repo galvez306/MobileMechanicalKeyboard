@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mobile Mechanical Keyboard</string>
+    <string name="esc_key">ESC KEY</string>
+    <string name="guardado">Saved</string>
+    <string name="key_font">KEYS FONT</string>
+    <string name="font_text_example">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="practice">TRY</string>
     <string name="habilitar">Enable</string>
     <string name="seleccionar">Select</string>
     <string name="probar">Test</string>
+    <string name="oraciondeprueba">
+        esta oracion solo sirve de muestra para ver si se pueden comparar los textos
+    </string>
     <string name="ayuda"><u>Help</u></string>
     <string name="ok">OK</string>
     <string name="textoayuda">If you are having troubles with the setting of the keyboard in your device,

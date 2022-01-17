@@ -13,6 +13,8 @@ import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.util.Log;
 
+import androidx.core.content.ContextCompat;
+
 import java.util.List;
 
 public class CustomKeyboard extends KeyboardView {
@@ -39,7 +41,7 @@ public class CustomKeyboard extends KeyboardView {
         Paint paint = new Paint();
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTextSize(getResources().getDimensionPixelSize(R.dimen.key_size));
-        paint.setColor(Color.BLACK);
+        paint.setColor(Color.DKGRAY);
         Typeface font = Typeface.createFromAsset(getContext().getAssets(), sharedPreferences.getString("font","adam.ttf"));
         paint.setTypeface(font);
         List<Keyboard.Key> keys = getKeyboard().getKeys();

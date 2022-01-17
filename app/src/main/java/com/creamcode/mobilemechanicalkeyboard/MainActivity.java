@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnEscKey =  findViewById(R.id.btn_esp_key);
         btnKeyFont = findViewById(R.id.btn_key_font);
-        btnTry = findViewById(R.id.btn_practice);
+        /*btnTry = findViewById(R.id.btn_practice);*/
 
         ivUsb = findViewById(R.id.iv_usb);
         ivMouse = findViewById(R.id.iv_mouse);
@@ -55,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnTry.setOnClickListener(new View.OnClickListener() {
+        /*btnTry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         ivUsb.setOnClickListener(new View.OnClickListener() {
             @Override
