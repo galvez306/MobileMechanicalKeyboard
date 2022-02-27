@@ -1,30 +1,17 @@
 package com.creamcode.mobilemechanicalkeyboard;
 
-import android.app.Activity;
-import android.app.Service;
-import android.content.Context;
-import android.content.Intent;
+
 import android.graphics.drawable.AnimationDrawable;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.IBinder;
-import android.provider.Settings;
 import android.view.KeyEvent;
-import android.view.KeyboardShortcutGroup;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
-import java.security.Key;
-
-//cambios en git
-//Segundo cambio en git
 public class MobileMechanicalKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
     private Keyboard keyboard;

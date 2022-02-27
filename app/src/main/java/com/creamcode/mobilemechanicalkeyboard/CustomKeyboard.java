@@ -11,9 +11,6 @@ import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
-import android.util.Log;
-
-import androidx.core.content.ContextCompat;
 
 import java.util.List;
 
