@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Mobile Mechanical Keyboard</string>
     <string name="esc_key">TECLA ESC</string>
+    <string name="interruptor">INTERRUPTOR</string>
     <string name="guardado">Guardado</string>
     <string name="key_font">FUENTE TECLAS</string>
     <string name="font_text_example">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
@@ -30,9 +31,26 @@
         <item>orbitron.ttf</item>
         <item>spirits.ttf</item>
         <item>true.ttf</item>
-
-
-
+    </string-array>
+    <string-array name="array_switches">
+        <item>CHERRY MX RED</item>
+        <item>CHERRY MX BLACK</item>
+        <item>CHERRY MX BLUE</item>
+        <item>CHERRY MX BROWN</item>
+        <item>HOLY PANDA</item>
+        <item>GATERON BLACK INK</item>
+        <item>GATERON RED INK</item>
+        <item>NOVELKEYS CREAM</item>
+    </string-array>
+    <string-array name="array_switches_sound">
+        <item>cherry_red_</item>
+        <item>cherry_black_</item>
+        <item>cherry_mx_blue_</item>
+        <item>cherry_mx_browns_</item>
+        <item>holy_panda_</item>
+        <item>gateron_black_inks_</item>
+        <item>gateron_red_inks_</item>
+        <item>novelkeys_cream_</item>
     </string-array>
     <string-array name="array_esc_key">
         <item>Esc</item>

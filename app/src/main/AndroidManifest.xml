@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileMechanicalKeyboard">
-        <activity android:name=".FuenteActivity"></activity>
+        <activity android:name=".SwitchActivity"></activity>
+        <activity android:name=".FuenteActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".EscKeyActivity" />
         <activity
@@ -29,6 +30,7 @@
             <meta-data
                 android:name="android.view.im"
                 android:resource="@xml/method" />
+
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>

@@ -8,11 +8,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_esp_key"
         android:layout_width="280dp"
         android:layout_height="120dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/deskmat1"
         android:text="@string/esc_key"
         android:textColor="@color/white"
@@ -22,6 +23,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_switch"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/deskmat6"
+        android:text="@string/interruptor"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_esp_key" />
 
     <EditText
         android:id="@+id/edt_prueba"
@@ -75,20 +89,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_key_font"
-        android:layout_width="280dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/deskmat4"
-        android:text="@string/key_font"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_esp_key" />
-
     <!--<androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_practice"
         android:layout_width="280dp"
@@ -102,6 +102,20 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_key_font" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_key_font"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/deskmat4"
+        android:text="@string/key_font"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_switch" />
 
     <TextView
         android:id="@+id/txv_ayuda"

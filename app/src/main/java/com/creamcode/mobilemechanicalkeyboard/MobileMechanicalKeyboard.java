@@ -1,15 +1,20 @@
 package com.creamcode.mobilemechanicalkeyboard;
 
 
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.media.MediaPlayer;
+import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
+
+import java.util.Arrays;
+import java.util.List;
 
 
 public class MobileMechanicalKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
@@ -22,6 +27,9 @@ public class MobileMechanicalKeyboard extends InputMethodService implements Keyb
     private boolean isAccent = false;
     private MediaPlayer mediaPlayer;
     private AnimationDrawable animationDrawable;
+    List<String> switches;
+    private SharedPreferences sharedPreferences;
+    private String switchType;
 
     @Override
     public View onCreateInputView() {
@@ -173,74 +181,124 @@ public class MobileMechanicalKeyboard extends InputMethodService implements Keyb
     }
 
     private void playClick(int i) {
-        switch(i){
-            case -10: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_esc); break;
-            case 49: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_one); break;
-            case 50: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_two); break;
-            case 51: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_three); break;
-            case 52: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_four); break;
-            case 53: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_five); break;
-            case 54: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_six); break;
-            case 55: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_seven); break;
-            case 56: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_eight); break;
-            case 57: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_nine); break;
-            case 48: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_cero); break;
-            case 45: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_under); break;
-            case 61: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_plus); break;
-            case -5: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_backspace); break;
-
-            case -14: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_tab); break;
-            case 113: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_q); break;
-            case 119: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_w); break;
-            case 101: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_e); break;
-            case 114: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_r); break;
-            case 116: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_t); break;
-            case 121: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_y); break;
-            case 117: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_u); break;
-            case 105: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_i); break;
-            case 111: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_o); break;
-            case 112: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_p); break;
-            case 91: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_braleft); break;
-            case 93: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_braright); break;
-            case 124: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_backslash); break;
-
-            case -1: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_caps); break;
-            case 97: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_a); break;
-            case 115: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_s); break;
-            case 100: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_d); break;
-            case 102: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_f); break;
-            case 103: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_g); break;
-            case 104: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_h); break;
-            case 106: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_j); break;
-            case 107: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_k); break;
-            case 108: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_l); break;
-            case 59: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_colon); break;
-            case 39: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_comma); break;
-            case -4: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_enter); break;
-
-            case -11: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_shiftleft); break;
-            case 122: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_z); break;
-            case 120: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_x); break;
-            case 99: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_c); break;
-            case 118: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_v); break;
-            case 98: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_b); break;
-            case 110: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_n); break;
-            case 109: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_m); break;
-            case 44: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_comma); break;
-            case 46: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_dot); break;
-            case 47: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_forwardslash); break;
-            case -12: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_shiftright); break;
-
-            case -21: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_ctrlleft); break;
-            case -20: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_win); break;
-            case -22: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_altleft); break;
-            case 32: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_space); break;
-            case -23: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_altright); break;
-            case -29: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_options); break;
-            case -28: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_fn); break;
-
-            default: mediaPlayer = MediaPlayer.create(this,R.raw.cherry_red_p); break;
-
+        switches = Arrays.asList(getResources().getStringArray(R.array.array_switches_sound));
+        String soundName="";
+        int resID;
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        switchType = sharedPreferences.getString("SWITCH_TYPE","CHERRY MX RED");
+        //GET THE SOUND EXTENSION NAME FROM THE SWITCH IN PREFERENCES
+        switch (switchType){
+            case "CHERRY MX RED":
+                soundName = switches.get(0);
+                break;
+            case "CHERRY MX BLACK":
+                soundName = switches.get(1);
+                break;
+            case "CHERRY MX BLUE":
+                soundName = switches.get(2);
+                break;
+            case "CHERRY MX BROWN":
+                soundName = switches.get(3);
+                break;
+            case "HOLY PANDA":
+                soundName = switches.get(4);
+                break;
+            case "GATERON BLACK INK":
+                soundName = switches.get(5);
+                break;
+            case "GATERON RED INK":
+                soundName = switches.get(6);
+                break;
+            case "NOVELKEYS CREAM":
+                soundName = switches.get(7);
+                break;
+        }
+        //una vez seteado el sonido dependiendo de la preferencia solo queda reproducirlo
+        switch (i) {
+            case -10:
+            case 49:
+            case 50:
+            case 51:
+            case 52:
+            case 53:
+            case 54:
+            case 55:
+            case 56:
+            case 57:
+            case 48:
+            case 45:
+            case 61:
+                resID = this.getResources().getIdentifier(soundName+"typeone", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case -14:
+            case 113:
+            case 119:
+            case 101:
+            case 114:
+            case 116:
+            case 121:
+            case 117:
+            case 105:
+            case 111:
+            case 112:
+            case 91:
+            case 93:
+            case 124:
+                resID = getResources().getIdentifier(soundName+"typetwo", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case -1:
+            case 97:
+            case 115:
+            case 100:
+            case 102:
+            case 103:
+            case 104:
+            case 106:
+            case 107:
+            case 108:
+            case 59:
+            case 39:
+                resID = getResources().getIdentifier(soundName+"typethree", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case 122:
+            case 120:
+            case 99:
+            case 118:
+            case 98:
+            case 110:
+            case 109:
+            case 44:
+            case 46:
+            case 47:
+            case -21:
+            case -20:
+            case -22:
+            case -23:
+            case -29:
+            case -28:
+                resID = getResources().getIdentifier(soundName+"typefour", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case 32:
+                resID = getResources().getIdentifier(soundName+"space", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case -4:
+                resID = getResources().getIdentifier(soundName+"enter", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case -11:
+            case -12:
+                resID = getResources().getIdentifier(soundName+"shift", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
+            case -5:
+                resID = getResources().getIdentifier(soundName+"backspace", "raw", this.getPackageName());
+                mediaPlayer = MediaPlayer.create(this,resID);
+                break;
 
         }
 

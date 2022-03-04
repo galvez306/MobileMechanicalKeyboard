@@ -16,7 +16,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppCompatButton btnEscKey, btnKeyFont, btnTry;
+    private AppCompatButton btnEscKey, btnKeyFont, btnSwitch, btnTry;
     private ImageView ivMouse, ivUsb, ivEarpods, ivSwitch, ivCoffee;
     private MediaPlayer mouseSound, usbSound, earpodsSound, switchSound, coffeeSound;
 
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnEscKey =  findViewById(R.id.btn_esp_key);
+        btnSwitch =  findViewById(R.id.btn_switch);
         btnKeyFont = findViewById(R.id.btn_key_font);
         /*btnTry = findViewById(R.id.btn_practice);*/
 
@@ -45,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, EscKeyActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SwitchActivity.class);
                 startActivity(intent);
             }
         });
